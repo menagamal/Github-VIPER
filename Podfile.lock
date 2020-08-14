@@ -1,0 +1,36 @@
+PODS:
+  - Alamofire (5.2.1)
+  - FittedSheets (1.4.6)
+  - IQKeyboardManagerSwift (6.2.1)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - SDWebImage (4.4.8):
+    - SDWebImage/Core (= 4.4.8)
+  - SDWebImage/Core (4.4.8)
+
+DEPENDENCIES:
+  - FittedSheets
+  - IQKeyboardManagerSwift (= 6.2.1)
+  - Moya
+  - SDWebImage (~> 4.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - FittedSheets
+    - IQKeyboardManagerSwift
+    - Moya
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  FittedSheets: 7f37fee2567d15dcde391f31eccbffb660ddebf0
+  IQKeyboardManagerSwift: 0f0ae8935360b4003e6ea1ac7c19898f01e2f7c7
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
+
+PODFILE CHECKSUM: 3a98d907cf395e66237b7573ec382235d6475de5
+
+COCOAPODS: 1.9.1

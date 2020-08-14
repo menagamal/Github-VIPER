@@ -1,0 +1,6 @@
+framework module Pods_GithubVIPERTests {
+  umbrella header "Pods-GithubVIPERTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
