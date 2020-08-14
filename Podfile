@@ -10,7 +10,7 @@ target 'GithubVIPER' do
   pod 'SDWebImage', '~> 4.0'
   pod 'FittedSheets'
   pod 'Moya'
-  
+  pod 'StanwoodCore'
 
   target 'GithubVIPERTests' do
     inherit! :search_paths

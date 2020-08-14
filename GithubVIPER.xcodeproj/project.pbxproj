@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,15 @@
 		D044167124E6E5F7007B1B47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D044167024E6E5F7007B1B47 /* Assets.xcassets */; };
 		D044167424E6E5F7007B1B47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D044167224E6E5F7007B1B47 /* LaunchScreen.storyboard */; };
 		D044167F24E6E5F7007B1B47 /* GithubVIPERTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044167E24E6E5F7007B1B47 /* GithubVIPERTests.swift */; };
+		D044169824E6EC64007B1B47 /* BaseConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044168B24E6EC64007B1B47 /* BaseConfig.swift */; };
+		D044169924E6EC64007B1B47 /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044168D24E6EC64007B1B47 /* BaseInteractor.swift */; };
+		D044169A24E6EC64007B1B47 /* BaseConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044168F24E6EC64007B1B47 /* BaseConstant.swift */; };
+		D044169B24E6EC64007B1B47 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044169124E6EC64007B1B47 /* BaseResponse.swift */; };
+		D044169C24E6EC64007B1B47 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044169324E6EC64007B1B47 /* BaseViewController.swift */; };
+		D044169D24E6EC64007B1B47 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044169424E6EC64007B1B47 /* KeyboardViewController.swift */; };
+		D044169E24E6EC64007B1B47 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044169524E6EC64007B1B47 /* BaseView.swift */; };
+		D044169F24E6EC64007B1B47 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044169724E6EC64007B1B47 /* BasePresenter.swift */; };
+		D04416A324E6ECB8007B1B47 /* CActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04416A224E6ECB8007B1B47 /* CActivityIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +53,15 @@
 		D044167A24E6E5F7007B1B47 /* GithubVIPERTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubVIPERTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D044167E24E6E5F7007B1B47 /* GithubVIPERTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubVIPERTests.swift; sourceTree = "<group>"; };
 		D044168024E6E5F7007B1B47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D044168B24E6EC64007B1B47 /* BaseConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseConfig.swift; sourceTree = "<group>"; };
+		D044168D24E6EC64007B1B47 /* BaseInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseInteractor.swift; sourceTree = "<group>"; };
+		D044168F24E6EC64007B1B47 /* BaseConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseConstant.swift; sourceTree = "<group>"; };
+		D044169124E6EC64007B1B47 /* BaseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		D044169324E6EC64007B1B47 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D044169424E6EC64007B1B47 /* KeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		D044169524E6EC64007B1B47 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		D044169724E6EC64007B1B47 /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		D04416A224E6ECB8007B1B47 /* CActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CActivityIndicator.swift; sourceTree = "<group>"; };
 		E72ECF8F7A88F7AA5632D434 /* Pods-GithubVIPERTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubVIPERTests.release.xcconfig"; path = "Target Support Files/Pods-GithubVIPERTests/Pods-GithubVIPERTests.release.xcconfig"; sourceTree = "<group>"; };
 		EB2CD519175EC8CE6D92EAD4 /* Pods_GithubVIPERTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubVIPERTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -85,7 +103,6 @@
 				2343A311F81C39AAEA30F305 /* Pods-GithubVIPERTests.debug.xcconfig */,
 				E72ECF8F7A88F7AA5632D434 /* Pods-GithubVIPERTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -112,6 +129,8 @@
 		D044166624E6E5F3007B1B47 /* GithubVIPER */ = {
 			isa = PBXGroup;
 			children = (
+				D04416A024E6ECB8007B1B47 /* Widgets */,
+				D044168924E6EBA6007B1B47 /* Base */,
 				D044166724E6E5F3007B1B47 /* AppDelegate.swift */,
 				D044166924E6E5F3007B1B47 /* SceneDelegate.swift */,
 				D044166B24E6E5F3007B1B47 /* ViewController.swift */,
@@ -130,6 +149,85 @@
 				D044168024E6E5F7007B1B47 /* Info.plist */,
 			);
 			path = GithubVIPERTests;
+			sourceTree = "<group>";
+		};
+		D044168924E6EBA6007B1B47 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D044168A24E6EC64007B1B47 /* Config */,
+				D044168E24E6EC64007B1B47 /* Constant */,
+				D044168C24E6EC64007B1B47 /* Interactor */,
+				D044169024E6EC64007B1B47 /* Model */,
+				D044169624E6EC64007B1B47 /* Presenter */,
+				D044169224E6EC64007B1B47 /* View */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D044168A24E6EC64007B1B47 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				D044168B24E6EC64007B1B47 /* BaseConfig.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		D044168C24E6EC64007B1B47 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				D044168D24E6EC64007B1B47 /* BaseInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		D044168E24E6EC64007B1B47 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				D044168F24E6EC64007B1B47 /* BaseConstant.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		D044169024E6EC64007B1B47 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D044169124E6EC64007B1B47 /* BaseResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D044169224E6EC64007B1B47 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D044169324E6EC64007B1B47 /* BaseViewController.swift */,
+				D044169424E6EC64007B1B47 /* KeyboardViewController.swift */,
+				D044169524E6EC64007B1B47 /* BaseView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D044169624E6EC64007B1B47 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D044169724E6EC64007B1B47 /* BasePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D04416A024E6ECB8007B1B47 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				D04416A124E6ECB8007B1B47 /* CActivityIndicator */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		D04416A124E6ECB8007B1B47 /* CActivityIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				D04416A224E6ECB8007B1B47 /* CActivityIndicator.swift */,
+			);
+			path = CActivityIndicator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,9 +398,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D044169824E6EC64007B1B47 /* BaseConfig.swift in Sources */,
+				D044169924E6EC64007B1B47 /* BaseInteractor.swift in Sources */,
 				D044166C24E6E5F3007B1B47 /* ViewController.swift in Sources */,
 				D044166824E6E5F3007B1B47 /* AppDelegate.swift in Sources */,
+				D04416A324E6ECB8007B1B47 /* CActivityIndicator.swift in Sources */,
+				D044169D24E6EC64007B1B47 /* KeyboardViewController.swift in Sources */,
+				D044169B24E6EC64007B1B47 /* BaseResponse.swift in Sources */,
+				D044169C24E6EC64007B1B47 /* BaseViewController.swift in Sources */,
+				D044169E24E6EC64007B1B47 /* BaseView.swift in Sources */,
+				D044169A24E6EC64007B1B47 /* BaseConstant.swift in Sources */,
 				D044166A24E6E5F3007B1B47 /* SceneDelegate.swift in Sources */,
+				D044169F24E6EC64007B1B47 /* BasePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
