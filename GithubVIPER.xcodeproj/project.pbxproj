@@ -11,7 +11,6 @@
 		B4887D6477411A6F8971393E /* Pods_GithubVIPER.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DFB77D90E2704B7197B1FD2 /* Pods_GithubVIPER.framework */; };
 		D044166824E6E5F3007B1B47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044166724E6E5F3007B1B47 /* AppDelegate.swift */; };
 		D044166A24E6E5F3007B1B47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044166924E6E5F3007B1B47 /* SceneDelegate.swift */; };
-		D044166C24E6E5F3007B1B47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044166B24E6E5F3007B1B47 /* ViewController.swift */; };
 		D044166F24E6E5F3007B1B47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D044166D24E6E5F3007B1B47 /* Main.storyboard */; };
 		D044167124E6E5F7007B1B47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D044167024E6E5F7007B1B47 /* Assets.xcassets */; };
 		D044167424E6E5F7007B1B47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D044167224E6E5F7007B1B47 /* LaunchScreen.storyboard */; };
@@ -25,6 +24,28 @@
 		D044169E24E6EC64007B1B47 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044169524E6EC64007B1B47 /* BaseView.swift */; };
 		D044169F24E6EC64007B1B47 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044169724E6EC64007B1B47 /* BasePresenter.swift */; };
 		D04416A324E6ECB8007B1B47 /* CActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04416A224E6ECB8007B1B47 /* CActivityIndicator.swift */; };
+		D04416A924E6EDDD007B1B47 /* AppTargetConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04416A724E6EDDD007B1B47 /* AppTargetConstant.swift */; };
+		D04416AA24E6EDDD007B1B47 /* AppTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04416A824E6EDDD007B1B47 /* AppTarget.swift */; };
+		D04416B224E6EE97007B1B47 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04416AB24E6EE97007B1B47 /* HomePresenter.swift */; };
+		D04416B324E6EE97007B1B47 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04416AC24E6EE97007B1B47 /* HomeRouter.swift */; };
+		D04416B424E6EE97007B1B47 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04416AD24E6EE97007B1B47 /* HomeViewController.swift */; };
+		D04416B524E6EE97007B1B47 /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04416AE24E6EE97007B1B47 /* HomeProtocols.swift */; };
+		D04416B624E6EE97007B1B47 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04416AF24E6EE97007B1B47 /* HomeInteractor.swift */; };
+		D04416B724E6EE97007B1B47 /* HomeConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04416B024E6EE97007B1B47 /* HomeConfig.swift */; };
+		D04416BB24E6EF39007B1B47 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04416BA24E6EF39007B1B47 /* Palette.swift */; };
+		D04416C424E700FF007B1B47 /* RepoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04416BD24E700FF007B1B47 /* RepoPresenter.swift */; };
+		D04416C524E700FF007B1B47 /* RepoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04416BE24E700FF007B1B47 /* RepoRouter.swift */; };
+		D04416C624E700FF007B1B47 /* RepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04416BF24E700FF007B1B47 /* RepoViewController.swift */; };
+		D04416C724E700FF007B1B47 /* RepoProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04416C024E700FF007B1B47 /* RepoProtocols.swift */; };
+		D04416C824E700FF007B1B47 /* RepoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04416C124E700FF007B1B47 /* RepoInteractor.swift */; };
+		D04416C924E700FF007B1B47 /* RepoConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04416C224E700FF007B1B47 /* RepoConfig.swift */; };
+		D04416CA24E700FF007B1B47 /* RepoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D04416C324E700FF007B1B47 /* RepoViewController.xib */; };
+		D04416CF24E72E7B007B1B47 /* UIView+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04416CC24E72E7B007B1B47 /* UIView+Extentions.swift */; };
+		D04416D024E72E7B007B1B47 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04416CD24E72E7B007B1B47 /* Date+Extensions.swift */; };
+		D04416D124E72E7B007B1B47 /* UIViewController+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04416CE24E72E7B007B1B47 /* UIViewController+Extentions.swift */; };
+		D04416D524E73D03007B1B47 /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04416D324E73D03007B1B47 /* RepoTableViewCell.swift */; };
+		D04416D624E73D03007B1B47 /* RepoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D04416D424E73D03007B1B47 /* RepoTableViewCell.xib */; };
+		D04416D824E73E9C007B1B47 /* RepoCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04416D724E73E9C007B1B47 /* RepoCellDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +66,6 @@
 		D044166424E6E5F3007B1B47 /* GithubVIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubVIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D044166724E6E5F3007B1B47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D044166924E6E5F3007B1B47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D044166B24E6E5F3007B1B47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D044166E24E6E5F3007B1B47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D044167024E6E5F7007B1B47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D044167324E6E5F7007B1B47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,6 +82,28 @@
 		D044169524E6EC64007B1B47 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		D044169724E6EC64007B1B47 /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		D04416A224E6ECB8007B1B47 /* CActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CActivityIndicator.swift; sourceTree = "<group>"; };
+		D04416A724E6EDDD007B1B47 /* AppTargetConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTargetConstant.swift; sourceTree = "<group>"; };
+		D04416A824E6EDDD007B1B47 /* AppTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTarget.swift; sourceTree = "<group>"; };
+		D04416AB24E6EE97007B1B47 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		D04416AC24E6EE97007B1B47 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		D04416AD24E6EE97007B1B47 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D04416AE24E6EE97007B1B47 /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
+		D04416AF24E6EE97007B1B47 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		D04416B024E6EE97007B1B47 /* HomeConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConfig.swift; sourceTree = "<group>"; };
+		D04416BA24E6EF39007B1B47 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
+		D04416BD24E700FF007B1B47 /* RepoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoPresenter.swift; sourceTree = "<group>"; };
+		D04416BE24E700FF007B1B47 /* RepoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoRouter.swift; sourceTree = "<group>"; };
+		D04416BF24E700FF007B1B47 /* RepoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewController.swift; sourceTree = "<group>"; };
+		D04416C024E700FF007B1B47 /* RepoProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoProtocols.swift; sourceTree = "<group>"; };
+		D04416C124E700FF007B1B47 /* RepoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoInteractor.swift; sourceTree = "<group>"; };
+		D04416C224E700FF007B1B47 /* RepoConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoConfig.swift; sourceTree = "<group>"; };
+		D04416C324E700FF007B1B47 /* RepoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoViewController.xib; sourceTree = "<group>"; };
+		D04416CC24E72E7B007B1B47 /* UIView+Extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extentions.swift"; sourceTree = "<group>"; };
+		D04416CD24E72E7B007B1B47 /* Date+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		D04416CE24E72E7B007B1B47 /* UIViewController+Extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extentions.swift"; sourceTree = "<group>"; };
+		D04416D324E73D03007B1B47 /* RepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
+		D04416D424E73D03007B1B47 /* RepoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoTableViewCell.xib; sourceTree = "<group>"; };
+		D04416D724E73E9C007B1B47 /* RepoCellDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCellDataSource.swift; sourceTree = "<group>"; };
 		E72ECF8F7A88F7AA5632D434 /* Pods-GithubVIPERTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubVIPERTests.release.xcconfig"; path = "Target Support Files/Pods-GithubVIPERTests/Pods-GithubVIPERTests.release.xcconfig"; sourceTree = "<group>"; };
 		EB2CD519175EC8CE6D92EAD4 /* Pods_GithubVIPERTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubVIPERTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -129,11 +171,14 @@
 		D044166624E6E5F3007B1B47 /* GithubVIPER */ = {
 			isa = PBXGroup;
 			children = (
+				D04416CB24E72E6A007B1B47 /* Extentions */,
+				D04416B924E6EF1B007B1B47 /* Palette */,
+				D04416A624E6ED9F007B1B47 /* Targets */,
+				D04416A424E6ED92007B1B47 /* Modules */,
 				D04416A024E6ECB8007B1B47 /* Widgets */,
 				D044168924E6EBA6007B1B47 /* Base */,
 				D044166724E6E5F3007B1B47 /* AppDelegate.swift */,
 				D044166924E6E5F3007B1B47 /* SceneDelegate.swift */,
-				D044166B24E6E5F3007B1B47 /* ViewController.swift */,
 				D044166D24E6E5F3007B1B47 /* Main.storyboard */,
 				D044167024E6E5F7007B1B47 /* Assets.xcassets */,
 				D044167224E6E5F7007B1B47 /* LaunchScreen.storyboard */,
@@ -230,6 +275,80 @@
 			path = CActivityIndicator;
 			sourceTree = "<group>";
 		};
+		D04416A424E6ED92007B1B47 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				D04416BC24E700F4007B1B47 /* Repo */,
+				D04416A524E6ED9A007B1B47 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		D04416A524E6ED9A007B1B47 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D04416AB24E6EE97007B1B47 /* HomePresenter.swift */,
+				D04416AC24E6EE97007B1B47 /* HomeRouter.swift */,
+				D04416AD24E6EE97007B1B47 /* HomeViewController.swift */,
+				D04416AE24E6EE97007B1B47 /* HomeProtocols.swift */,
+				D04416AF24E6EE97007B1B47 /* HomeInteractor.swift */,
+				D04416B024E6EE97007B1B47 /* HomeConfig.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D04416A624E6ED9F007B1B47 /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				D04416A824E6EDDD007B1B47 /* AppTarget.swift */,
+				D04416A724E6EDDD007B1B47 /* AppTargetConstant.swift */,
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
+		D04416B924E6EF1B007B1B47 /* Palette */ = {
+			isa = PBXGroup;
+			children = (
+				D04416BA24E6EF39007B1B47 /* Palette.swift */,
+			);
+			path = Palette;
+			sourceTree = "<group>";
+		};
+		D04416BC24E700F4007B1B47 /* Repo */ = {
+			isa = PBXGroup;
+			children = (
+				D04416D224E73CD7007B1B47 /* Cells */,
+				D04416BD24E700FF007B1B47 /* RepoPresenter.swift */,
+				D04416BE24E700FF007B1B47 /* RepoRouter.swift */,
+				D04416BF24E700FF007B1B47 /* RepoViewController.swift */,
+				D04416C024E700FF007B1B47 /* RepoProtocols.swift */,
+				D04416C124E700FF007B1B47 /* RepoInteractor.swift */,
+				D04416C224E700FF007B1B47 /* RepoConfig.swift */,
+				D04416C324E700FF007B1B47 /* RepoViewController.xib */,
+			);
+			path = Repo;
+			sourceTree = "<group>";
+		};
+		D04416CB24E72E6A007B1B47 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				D04416CD24E72E7B007B1B47 /* Date+Extensions.swift */,
+				D04416CC24E72E7B007B1B47 /* UIView+Extentions.swift */,
+				D04416CE24E72E7B007B1B47 /* UIViewController+Extentions.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		D04416D224E73CD7007B1B47 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D04416D324E73D03007B1B47 /* RepoTableViewCell.swift */,
+				D04416D424E73D03007B1B47 /* RepoTableViewCell.xib */,
+				D04416D724E73E9C007B1B47 /* RepoCellDataSource.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -314,9 +433,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D04416CA24E700FF007B1B47 /* RepoViewController.xib in Resources */,
 				D044167424E6E5F7007B1B47 /* LaunchScreen.storyboard in Resources */,
 				D044167124E6E5F7007B1B47 /* Assets.xcassets in Resources */,
 				D044166F24E6E5F3007B1B47 /* Main.storyboard in Resources */,
+				D04416D624E73D03007B1B47 /* RepoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,15 +520,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				D044169824E6EC64007B1B47 /* BaseConfig.swift in Sources */,
+				D04416B624E6EE97007B1B47 /* HomeInteractor.swift in Sources */,
 				D044169924E6EC64007B1B47 /* BaseInteractor.swift in Sources */,
-				D044166C24E6E5F3007B1B47 /* ViewController.swift in Sources */,
+				D04416C624E700FF007B1B47 /* RepoViewController.swift in Sources */,
+				D04416B424E6EE97007B1B47 /* HomeViewController.swift in Sources */,
+				D04416C924E700FF007B1B47 /* RepoConfig.swift in Sources */,
+				D04416C524E700FF007B1B47 /* RepoRouter.swift in Sources */,
+				D04416B524E6EE97007B1B47 /* HomeProtocols.swift in Sources */,
+				D04416B224E6EE97007B1B47 /* HomePresenter.swift in Sources */,
+				D04416D024E72E7B007B1B47 /* Date+Extensions.swift in Sources */,
+				D04416D124E72E7B007B1B47 /* UIViewController+Extentions.swift in Sources */,
 				D044166824E6E5F3007B1B47 /* AppDelegate.swift in Sources */,
+				D04416C724E700FF007B1B47 /* RepoProtocols.swift in Sources */,
+				D04416BB24E6EF39007B1B47 /* Palette.swift in Sources */,
+				D04416B324E6EE97007B1B47 /* HomeRouter.swift in Sources */,
+				D04416A924E6EDDD007B1B47 /* AppTargetConstant.swift in Sources */,
+				D04416B724E6EE97007B1B47 /* HomeConfig.swift in Sources */,
+				D04416C824E700FF007B1B47 /* RepoInteractor.swift in Sources */,
 				D04416A324E6ECB8007B1B47 /* CActivityIndicator.swift in Sources */,
 				D044169D24E6EC64007B1B47 /* KeyboardViewController.swift in Sources */,
+				D04416D824E73E9C007B1B47 /* RepoCellDataSource.swift in Sources */,
 				D044169B24E6EC64007B1B47 /* BaseResponse.swift in Sources */,
+				D04416C424E700FF007B1B47 /* RepoPresenter.swift in Sources */,
 				D044169C24E6EC64007B1B47 /* BaseViewController.swift in Sources */,
+				D04416D524E73D03007B1B47 /* RepoTableViewCell.swift in Sources */,
 				D044169E24E6EC64007B1B47 /* BaseView.swift in Sources */,
+				D04416AA24E6EDDD007B1B47 /* AppTarget.swift in Sources */,
 				D044169A24E6EC64007B1B47 /* BaseConstant.swift in Sources */,
+				D04416CF24E72E7B007B1B47 /* UIView+Extentions.swift in Sources */,
 				D044166A24E6E5F3007B1B47 /* SceneDelegate.swift in Sources */,
 				D044169F24E6EC64007B1B47 /* BasePresenter.swift in Sources */,
 			);

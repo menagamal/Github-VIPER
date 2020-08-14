@@ -7,21 +7,62 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GithubVIPER" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="GithubVIPER" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r3f-q4-YdE">
+                                <rect key="frame" x="0.0" y="802" width="414" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="M6N-CX-oDo"/>
+                                </constraints>
+                                <items>
+                                    <tabBarItem title="Repositories" image="database" id="gvY-Q4-oej"/>
+                                    <tabBarItem title="Favourites" image="tabFav" id="Mef-nQ-uRW"/>
+                                </items>
+                            </tabBar>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t79-Cc-B9d">
+                                <rect key="frame" x="8" y="104" width="398" height="682"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomCornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="topCornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="53h-b3-xGv" kind="embed" id="Qip-RF-C2l"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r3f-q4-YdE" secondAttribute="trailing" id="Bpm-TG-b7C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t79-Cc-B9d" secondAttribute="trailing" constant="8" id="HYG-hQ-xB4"/>
+                            <constraint firstItem="r3f-q4-YdE" firstAttribute="top" secondItem="t79-Cc-B9d" secondAttribute="bottom" constant="16" id="K8S-BU-ZrR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="r3f-q4-YdE" secondAttribute="bottom" id="VSI-G5-lyu"/>
+                            <constraint firstItem="r3f-q4-YdE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lKH-Zt-FmG"/>
+                            <constraint firstItem="t79-Cc-B9d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="ylD-L4-BmZ"/>
+                            <constraint firstItem="t79-Cc-B9d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="zEE-el-fvU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="i2o-ZK-ZZh"/>
+                    <connections>
+                        <outlet property="container" destination="t79-Cc-B9d" id="Z5S-2E-V7Y"/>
+                        <outlet property="tabBar" destination="r3f-q4-YdE" id="hc2-I9-J19"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="796" y="138"/>
+            <point key="canvasLocation" x="795.6521739130435" y="137.94642857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tcu-Z1-wh1">
@@ -41,5 +82,23 @@
             </objects>
             <point key="canvasLocation" x="-104" y="138"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="jAe-le-6jG">
+            <objects>
+                <viewController id="53h-b3-xGv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KeZ-Zn-1xo">
+                        <rect key="frame" x="0.0" y="0.0" width="398" height="682"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="be2-7G-KKg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1462" y="138"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="database" width="35" height="35"/>
+        <image name="tabFav" width="35" height="35"/>
+    </resources>
 </document>
