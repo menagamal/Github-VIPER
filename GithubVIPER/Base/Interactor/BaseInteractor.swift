@@ -21,22 +21,11 @@ extension BaseInteractor {
             case .success(let response):
                 do {
                     
-                    let decodableResponse = try response.debugLog().map(BaseResponse<T>.self)
-                    if let data = decodableResponse.data, decodableResponse.code == BaseConstant.Codes.success.rawValue {
-                        DispatchQueue.main.async {
-                            completion(data)
-                        }
+                    let decodableResponse = try response.debugLog().map(T.self)
+                    DispatchQueue.main.async {
+                        completion(decodableResponse)
                     }
-                    else if decodableResponse.code == BaseConstant.Codes.unAuthorized.rawValue {
-                        DispatchQueue.main.async {
-                            self.basePresenter?.present(message:"An Error occured Please try again.")
-                        }
-                    }
-                    else {
-                        DispatchQueue.main.async {
-                            self.basePresenter!.present(message: "An Error occured Please try again.")
-                        }
-                    }
+                    
                 }
                 catch {
                     print(error)

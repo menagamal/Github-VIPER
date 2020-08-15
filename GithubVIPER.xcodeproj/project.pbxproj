@@ -10,6 +10,9 @@
 		70C31DE898469A7F1E5143F6 /* Pods_GithubVIPERTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB2CD519175EC8CE6D92EAD4 /* Pods_GithubVIPERTests.framework */; };
 		B4887D6477411A6F8971393E /* Pods_GithubVIPER.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DFB77D90E2704B7197B1FD2 /* Pods_GithubVIPER.framework */; };
 		D039DB4424E7C06A00211078 /* UISegmentedControl+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D039DB4324E7C06A00211078 /* UISegmentedControl+Extentions.swift */; };
+		D039DB4924E7C7B000211078 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D039DB4624E7C7B000211078 /* Owner.swift */; };
+		D039DB4A24E7C7B000211078 /* FetchReposResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D039DB4724E7C7B000211078 /* FetchReposResponse.swift */; };
+		D039DB4D24E7CE1200211078 /* Repos.swift in Sources */ = {isa = PBXBuildFile; fileRef = D039DB4C24E7CE1200211078 /* Repos.swift */; };
 		D044166824E6E5F3007B1B47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044166724E6E5F3007B1B47 /* AppDelegate.swift */; };
 		D044166A24E6E5F3007B1B47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044166924E6E5F3007B1B47 /* SceneDelegate.swift */; };
 		D044166F24E6E5F3007B1B47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D044166D24E6E5F3007B1B47 /* Main.storyboard */; };
@@ -65,6 +68,9 @@
 		4DFB77D90E2704B7197B1FD2 /* Pods_GithubVIPER.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubVIPER.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2811C4FE4D4881ABC1224B6 /* Pods-GithubVIPER.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubVIPER.debug.xcconfig"; path = "Target Support Files/Pods-GithubVIPER/Pods-GithubVIPER.debug.xcconfig"; sourceTree = "<group>"; };
 		D039DB4324E7C06A00211078 /* UISegmentedControl+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+Extentions.swift"; sourceTree = "<group>"; };
+		D039DB4624E7C7B000211078 /* Owner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		D039DB4724E7C7B000211078 /* FetchReposResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchReposResponse.swift; sourceTree = "<group>"; };
+		D039DB4C24E7CE1200211078 /* Repos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repos.swift; sourceTree = "<group>"; };
 		D044166424E6E5F3007B1B47 /* GithubVIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubVIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D044166724E6E5F3007B1B47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D044166924E6E5F3007B1B47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +154,16 @@
 				E72ECF8F7A88F7AA5632D434 /* Pods-GithubVIPERTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D039DB4524E7C76900211078 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D039DB4C24E7CE1200211078 /* Repos.swift */,
+				D039DB4724E7C7B000211078 /* FetchReposResponse.swift */,
+				D039DB4624E7C7B000211078 /* Owner.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		D044165B24E6E5F3007B1B47 = {
@@ -319,6 +335,7 @@
 		D04416BC24E700F4007B1B47 /* Repo */ = {
 			isa = PBXGroup;
 			children = (
+				D039DB4524E7C76900211078 /* Entity */,
 				D04416D224E73CD7007B1B47 /* Cells */,
 				D04416BD24E700FF007B1B47 /* RepoPresenter.swift */,
 				D04416BE24E700FF007B1B47 /* RepoRouter.swift */,
@@ -541,6 +558,8 @@
 				D04416B724E6EE97007B1B47 /* HomeConfig.swift in Sources */,
 				D04416C824E700FF007B1B47 /* RepoInteractor.swift in Sources */,
 				D04416A324E6ECB8007B1B47 /* CActivityIndicator.swift in Sources */,
+				D039DB4924E7C7B000211078 /* Owner.swift in Sources */,
+				D039DB4D24E7CE1200211078 /* Repos.swift in Sources */,
 				D044169D24E6EC64007B1B47 /* KeyboardViewController.swift in Sources */,
 				D04416D824E73E9C007B1B47 /* RepoCellDataSource.swift in Sources */,
 				D044169B24E6EC64007B1B47 /* BaseResponse.swift in Sources */,
@@ -548,6 +567,7 @@
 				D044169C24E6EC64007B1B47 /* BaseViewController.swift in Sources */,
 				D04416D524E73D03007B1B47 /* RepoTableViewCell.swift in Sources */,
 				D044169E24E6EC64007B1B47 /* BaseView.swift in Sources */,
+				D039DB4A24E7C7B000211078 /* FetchReposResponse.swift in Sources */,
 				D04416AA24E6EDDD007B1B47 /* AppTarget.swift in Sources */,
 				D044169A24E6EC64007B1B47 /* BaseConstant.swift in Sources */,
 				D04416CF24E72E7B007B1B47 /* UIView+Extentions.swift in Sources */,

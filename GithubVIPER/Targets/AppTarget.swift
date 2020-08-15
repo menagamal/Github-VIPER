@@ -12,7 +12,7 @@ import Moya
 
 
 enum AppTarget {
-  
+    case fetchRepos(query:String,page:Int)
 }
 
 extension AppTarget: TargetType {
@@ -25,17 +25,10 @@ extension AppTarget: TargetType {
     }
     
     var path: String {
-//        switch self {
-//        case .updateProfile:
-//            return AppTargetConstant.EndPoint.updateProfile
-//        case .wallet:
-//            return AppTargetConstant.EndPoint.wallet
-//        case .verifyCustomerNumber:
-//            return AppTargetConstant.EndPoint.verifyCustomerNumberAmount
-//        case .setCustomerNumberAmount:
-//            return AppTargetConstant.EndPoint.setCustomerNumberAmount
-//        }
-        return ""
+        switch self {
+        case .fetchRepos:
+            return AppTargetConstant.EndPoint.fetchRepos
+        }
     }
     
     
@@ -44,32 +37,29 @@ extension AppTarget: TargetType {
     }
     
     var method: Moya.Method{
-//        switch self {
-//        case .wallet:
-//            return .get
-//        case .verifyCustomerNumber,.setCustomerNumberAmount,.updateProfile:
-//            return .post
-//        }
         return .get
     }
     
     var task: Task {
-        return .requestPlain
-//        switch self {
-//        case .wallet:
-//            return .requestPlain
-//
-//        }
+        
+        switch self {
+        case .fetchRepos(let query, let page):
+            let parameters: [String: Any] = [AppTargetConstant.Parameters.query: query,
+                                             AppTargetConstant.Parameters.sort: AppTargetConstant.Constants.stars,
+                                             AppTargetConstant.Parameters.order: AppTargetConstant.Constants.desc,
+                                             AppTargetConstant.Parameters.page: page
+            ]
+            return .requestParameters(parameters: parameters, encoding: URLEncoding.queryString)
+            
+        }
     }
     
     var headers: [String : String]? {
-//        let token = UserDefaultsHandler().getUserToken()
-//        let authorized: [String: String] = [
-//
-//            BaseConstant.HTTPHeaderField.Accept.rawValue: BaseConstant.ContentType.json.rawValue,
-//            BaseConstant.HTTPHeaderField.ContentType.rawValue: BaseConstant.ContentType.json.rawValue,
-//            BaseConstant.HTTPHeaderField.Authorization.rawValue: "Bearer \(token)"]
-        return [String: String]()
+        let headers: [String: String] = [
+            BaseConstant.HTTPHeaderField.Accept.rawValue: BaseConstant.ContentType.json.rawValue,
+            BaseConstant.HTTPHeaderField.ContentType.rawValue: BaseConstant.ContentType.json.rawValue,
+        ]
+        return headers
     }
     
 }

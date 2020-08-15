@@ -11,6 +11,39 @@
 import UIKit
 
 class RepoInteractor: BaseInteractor<AppTarget>,RepoInteractorInputProtocol {
-
+    
     weak var presenter: RepoInteractorOutputProtocol?
+    
+    private var dailyRepo = [Repos]()
+    private var weeklyRepo = [Repos]()
+    private var monthlyRepo = [Repos]()
+    
+    func loadRepos(date: String, page: Int,timeframe:TimeFrame) {
+        request(targetType: .fetchRepos(query: date, page: page)) { [weak self] (response: FetchReposResponse) in
+            guard let strongSelf = self else { return }
+            guard let repos = response.items else { return }
+            switch timeframe {
+            case .Day:
+                for item in repos {
+                    strongSelf.dailyRepo.append(item)
+                }
+                strongSelf.presenter?.didLoadRepos(response: strongSelf.dailyRepo)
+                break
+            case .Week:
+                for item in repos {
+                    strongSelf.weeklyRepo.append(item)
+                }
+                strongSelf.presenter?.didLoadRepos(response: strongSelf.weeklyRepo)
+                break
+            case .Month:
+                for item in repos {
+                    strongSelf.monthlyRepo.append(item)
+                }
+                strongSelf.presenter?.didLoadRepos(response: strongSelf.monthlyRepo)
+                break
+            }
+            
+        }
+    }
+    
 }

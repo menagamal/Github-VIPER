@@ -19,17 +19,18 @@ protocol RepoViewProtocol: class {
 //MARK: Presenter -
 protocol RepoPresenterProtocol: class {
     var view: RepoViewProtocol?  { get set }
-    func loadRepos()
+    func loadRepos(timeframe:TimeFrame)
+    func presenterViewDidLoad()  
 }
 
 //MARK: Interactor -
 protocol RepoInteractorOutputProtocol: class {
-
-  
+    func didLoadRepos(response:[Repos])
+    
 }
 protocol RepoInteractorInputProtocol: class {
-
-  var presenter: RepoInteractorOutputProtocol?  { get set }
+    var presenter: RepoInteractorOutputProtocol?  { get set }
+    func loadRepos (date:String,page:Int,timeframe:TimeFrame)
 }
 
 //MARK: Router -

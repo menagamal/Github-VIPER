@@ -11,24 +11,57 @@
 import UIKit
 
 class RepoPresenter: BasePresenter,RepoPresenterProtocol {
-
+    
     weak internal var view: RepoViewProtocol?
+    
     var interactor: RepoInteractorInputProtocol?
+    
     private let router: RepoRouterProtocol
+    
     private var dataSource:RepoCellDataSource?
+    
+    private var pageCount:Int?
+    
+    private var currentTimeFrame:TimeFrame?
+    
     
     init(view: RepoViewProtocol, interactor: RepoInteractorInputProtocol?, router: RepoRouterProtocol) {
         self.view = view
         self.interactor = interactor
         self.router = router
+        pageCount = 1
+        
     }
-    func loadRepos() {
+    func presenterViewDidLoad() {
         guard let view =  self.view else {
             return
         }
         dataSource = RepoCellDataSource(delegate: self, tableView: view.repoTableView)
     }
-
+    func loadRepos(timeframe:TimeFrame) {
+        var date = ""
+        
+        switch timeframe {
+        case .Day:
+            date = Date().dateToString(format: DateFormat.get(.yyyy_MM_dd)())
+            currentTimeFrame = .Day
+            break
+        case .Week:
+            guard let lastWeekDate = Calendar.current.date(byAdding: .weekOfYear, value: -1, to: Date()) else {return }
+            date = lastWeekDate.dateToString(format: DateFormat.get(.yyyy_MM_dd)())
+            currentTimeFrame = .Week
+            break
+        case .Month:
+            guard let lastMonthDate = Calendar.current.date(byAdding: .month, value: -1, to: Date()) else {return }
+            date = lastMonthDate.dateToString(format: DateFormat.get(.yyyy_MM_dd)())
+            currentTimeFrame = .Month
+            break
+        }
+        baseView?.showLoadingIndicator()
+        self.interactor?.loadRepos(date: date, page: pageCount ?? 1, timeframe: timeframe )
+        
+    }
+    
 }
 
 extension RepoPresenter:RepoCellDataSourceDelegate{
@@ -39,5 +72,18 @@ extension RepoPresenter:RepoCellDataSourceDelegate{
 }
 
 extension RepoPresenter: RepoInteractorOutputProtocol {
+    func didLoadRepos(response: [Repos]) {
+        baseView?.hideLoadingIndicator()
+        self.presenterViewDidLoad()
+        dataSource?.reloadWithData(repos: response)
+        DispatchQueue.main.async {
+            self.view?.repoTableView.setContentOffset(.zero, animated: true)
+        }
+    }
     
+}
+
+
+enum TimeFrame {
+    case Day,Week,Month
 }

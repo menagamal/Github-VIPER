@@ -15,7 +15,7 @@ class RepoCellDataSource:  NSObject, UITableViewDataSource,UITableViewDelegate {
     weak var delegate: RepoCellDataSourceDelegate!
     
     var tableView: UITableView!
-
+    var repos = [Repos]()
     init(delegate:RepoCellDataSourceDelegate,tableView:UITableView) {
         super.init()
 
@@ -31,14 +31,20 @@ class RepoCellDataSource:  NSObject, UITableViewDataSource,UITableViewDelegate {
     
    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return repos.count
     }
     
+    func reloadWithData(repos:[Repos])  {
+        for item in repos {
+            self.repos.append(item)
+        }
+        self.tableView.reloadData()
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RepoTableViewCell", for: indexPath) as! RepoTableViewCell
         cell.selectionStyle = .none
-        cell.setDetails()
+        cell.setDetails(repo: repos[indexPath.row])
         return cell
     }
     

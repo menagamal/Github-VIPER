@@ -11,14 +11,23 @@ import Foundation
 
 enum AppTargetConstant {
     
+    
     enum EndPoint {
         
-//        static let wallet = "customer/wallet"
+        static let fetchRepos = "search/repositories"
 
     }
     
     enum Parameters {
-//        static let customerNumber = "customerNumber"
+        static let query = "q"
+        static let sort = "sort"
+        static let order = "order"
+        static let page = "page"
+    }
+    
+    enum Constants {
+        static let desc = "desc"
+        static let stars = "stars"
     }
     
     

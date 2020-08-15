@@ -10,7 +10,7 @@ import Foundation
 
 enum BaseConstant {
     
-    static let baseUrl = "https://coins.apis.live/api/"
+    static let baseUrl = "https://api.github.com/"
     
     enum Codes: Int {
         case success = 200

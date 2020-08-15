@@ -9,7 +9,7 @@
 //
 
 import UIKit
-import BetterSegmentedControl
+
 
 class RepoViewController: BaseViewController, RepoViewProtocol {
     
@@ -17,18 +17,31 @@ class RepoViewController: BaseViewController, RepoViewProtocol {
     @IBOutlet weak var repoTableView: UITableView!
     @IBOutlet weak var controlFrameView: UIView!
     var presenter: RepoPresenterProtocol?
-    var control:BetterSegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         seg.selectedSegmentTintColor = Palette.slateGrey
         seg.tintColor = Palette.slateGrey
         seg.ensureiOS12Style()
-        self.presenter?.loadRepos()
+        self.presenter?.presenterViewDidLoad()
+        self.presenter?.loadRepos(timeframe: .Day)
     }
     
     @IBAction func onSegmentChanged(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            self.presenter?.loadRepos(timeframe: .Day)
+            break
+        case 1:
+            self.presenter?.loadRepos(timeframe: .Week)
+            break
+        case 2:
+            self.presenter?.loadRepos(timeframe: .Month)
+            break
+        default:
+            break
+        }
     }
     
 }
