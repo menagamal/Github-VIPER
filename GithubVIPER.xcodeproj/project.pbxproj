@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		70C31DE898469A7F1E5143F6 /* Pods_GithubVIPERTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB2CD519175EC8CE6D92EAD4 /* Pods_GithubVIPERTests.framework */; };
 		B4887D6477411A6F8971393E /* Pods_GithubVIPER.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DFB77D90E2704B7197B1FD2 /* Pods_GithubVIPER.framework */; };
+		D039DB4424E7C06A00211078 /* UISegmentedControl+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D039DB4324E7C06A00211078 /* UISegmentedControl+Extentions.swift */; };
 		D044166824E6E5F3007B1B47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044166724E6E5F3007B1B47 /* AppDelegate.swift */; };
 		D044166A24E6E5F3007B1B47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D044166924E6E5F3007B1B47 /* SceneDelegate.swift */; };
 		D044166F24E6E5F3007B1B47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D044166D24E6E5F3007B1B47 /* Main.storyboard */; };
@@ -63,6 +64,7 @@
 		2A466C628E4562505BDB7462 /* Pods-GithubVIPER.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubVIPER.release.xcconfig"; path = "Target Support Files/Pods-GithubVIPER/Pods-GithubVIPER.release.xcconfig"; sourceTree = "<group>"; };
 		4DFB77D90E2704B7197B1FD2 /* Pods_GithubVIPER.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubVIPER.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2811C4FE4D4881ABC1224B6 /* Pods-GithubVIPER.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubVIPER.debug.xcconfig"; path = "Target Support Files/Pods-GithubVIPER/Pods-GithubVIPER.debug.xcconfig"; sourceTree = "<group>"; };
+		D039DB4324E7C06A00211078 /* UISegmentedControl+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+Extentions.swift"; sourceTree = "<group>"; };
 		D044166424E6E5F3007B1B47 /* GithubVIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubVIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D044166724E6E5F3007B1B47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D044166924E6E5F3007B1B47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -335,6 +337,7 @@
 				D04416CD24E72E7B007B1B47 /* Date+Extensions.swift */,
 				D04416CC24E72E7B007B1B47 /* UIView+Extentions.swift */,
 				D04416CE24E72E7B007B1B47 /* UIViewController+Extentions.swift */,
+				D039DB4324E7C06A00211078 /* UISegmentedControl+Extentions.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -548,6 +551,7 @@
 				D04416AA24E6EDDD007B1B47 /* AppTarget.swift in Sources */,
 				D044169A24E6EC64007B1B47 /* BaseConstant.swift in Sources */,
 				D04416CF24E72E7B007B1B47 /* UIView+Extentions.swift in Sources */,
+				D039DB4424E7C06A00211078 /* UISegmentedControl+Extentions.swift in Sources */,
 				D044166A24E6E5F3007B1B47 /* SceneDelegate.swift in Sources */,
 				D044169F24E6EC64007B1B47 /* BasePresenter.swift in Sources */,
 			);

@@ -10,6 +10,7 @@
             <connections>
                 <outlet property="controlFrameView" destination="ReS-kA-Bj1" id="nFg-z2-aiL"/>
                 <outlet property="repoTableView" destination="RkC-hL-hJH" id="62H-4t-3Sf"/>
+                <outlet property="seg" destination="Vrr-K2-6tR" id="HMb-Ub-WGN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -29,15 +30,32 @@
                     <rect key="frame" x="16" y="78" width="343" height="557"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vrr-K2-6tR">
+                    <rect key="frame" x="32" y="32" width="311" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="Fcs-mJ-bhb"/>
+                    </constraints>
+                    <segments>
+                        <segment title="Day"/>
+                        <segment title="Week"/>
+                        <segment title="Month"/>
+                    </segments>
+                    <connections>
+                        <action selector="onSegmentChanged:" destination="-1" eventType="valueChanged" id="Cs8-GI-pNy"/>
+                    </connections>
+                </segmentedControl>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.93680436643835618" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.96350054757663028" green="0.95884595555935181" blue="0.96815513959390864" alpha="0.93680436643835618" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstItem="ReS-kA-Bj1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="32" id="GmV-Qv-d0O"/>
                 <constraint firstAttribute="trailing" secondItem="RkC-hL-hJH" secondAttribute="trailing" constant="16" id="Heo-q0-e3j"/>
+                <constraint firstItem="Vrr-K2-6tR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="32" id="NOE-HK-Z7M"/>
                 <constraint firstAttribute="bottom" secondItem="RkC-hL-hJH" secondAttribute="bottom" constant="32" id="NRW-9L-3u6"/>
+                <constraint firstAttribute="trailing" secondItem="Vrr-K2-6tR" secondAttribute="trailing" constant="32" id="Q8R-Eh-2iR"/>
                 <constraint firstItem="RkC-hL-hJH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="RW1-Qc-7Hj"/>
                 <constraint firstItem="ReS-kA-Bj1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="32" id="alE-Ia-Q4d"/>
                 <constraint firstItem="RkC-hL-hJH" firstAttribute="top" secondItem="ReS-kA-Bj1" secondAttribute="bottom" constant="16" id="nQv-K5-1vX"/>
+                <constraint firstItem="Vrr-K2-6tR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="32" id="o8w-5r-w9r"/>
                 <constraint firstAttribute="trailing" secondItem="ReS-kA-Bj1" secondAttribute="trailing" constant="32" id="psH-ke-sKt"/>
             </constraints>
             <point key="canvasLocation" x="138" y="154"/>

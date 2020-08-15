@@ -13,6 +13,7 @@ import BetterSegmentedControl
 
 class RepoViewController: BaseViewController, RepoViewProtocol {
     
+    @IBOutlet weak var seg: UISegmentedControl!
     @IBOutlet weak var repoTableView: UITableView!
     @IBOutlet weak var controlFrameView: UIView!
     var presenter: RepoPresenterProtocol?
@@ -20,36 +21,14 @@ class RepoViewController: BaseViewController, RepoViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addSegmentControll()
+
+        seg.selectedSegmentTintColor = Palette.slateGrey
+        seg.tintColor = Palette.slateGrey
+        seg.ensureiOS12Style()
         self.presenter?.loadRepos()
     }
     
-    func addSegmentControll () {
-        self.control = BetterSegmentedControl(
-            frame: controlFrameView.frame,
-            segments: LabelSegment.segments(withTitles: ["Day", "Week", "Month"],
-                                            normalFont: UIFont(name: "HelveticaNeue-Light", size: 14.0)!,
-                                            normalTextColor: Palette.slateGrey,
-                                            selectedFont: UIFont(name: "HelveticaNeue-Bold", size: 14.0)!,
-                                            selectedTextColor: .white),
-            index: 1 ,
-            options: [.backgroundColor(.clear),
-                      .indicatorViewBackgroundColor(Palette.slateGrey) , .cornerRadius(4),.indicatorViewBorderWidth(1),.indicatorViewBorderColor(Palette.slateGrey)])
-        self.control.addTarget(self, action: #selector(self.controlValueChanged), for: .valueChanged)
-        self.control.layer.borderColor = Palette.slateGrey.cgColor
-        self.control.layer.borderWidth = 1
-        view.addSubview(self.control)
-        self.control.setNeedsLayout()
-    }
-    
-    @objc func controlValueChanged () {
-        guard let control = control else {
-            return
-        }
-        switch control.index {
-        default:
-            break
-        }
+    @IBAction func onSegmentChanged(_ sender: UISegmentedControl) {
     }
     
 }
