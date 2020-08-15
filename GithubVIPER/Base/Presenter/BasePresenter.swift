@@ -10,7 +10,6 @@ import Foundation
 
 protocol BasePresenterProtocol {
     func present(message: String)
-    func unAuthorized()
 }
 class BasePresenter {
     weak var baseView: BaseViewProtocol?
@@ -18,9 +17,7 @@ class BasePresenter {
 
 extension BasePresenter: BasePresenterProtocol {
     
-    func unAuthorized() {
-        baseView?.unAuthorized()
-    }
+    
     
     func present(message: String) {
         baseView?.hideLoadingIndicator()

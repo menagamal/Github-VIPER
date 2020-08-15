@@ -9,23 +9,41 @@
 //
 
 import UIKit
-
+import Network
 
 class RepoViewController: BaseViewController, RepoViewProtocol {
     
+    @IBOutlet weak var noInternetImageVIew: UIImageView!
     @IBOutlet weak var seg: UISegmentedControl!
     @IBOutlet weak var repoTableView: UITableView!
-    @IBOutlet weak var controlFrameView: UIView!
+    
     var presenter: RepoPresenterProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        Reachability().checkForInternet(action: { (value) in
+            DispatchQueue.main.async {
+                if value {
+                    self.repoTableView.isHidden = false
+                    self.seg.isHidden = false
+                    self.noInternetImageVIew.isHidden = true
+                    self.setSegment()
+                    self.presenter?.presenterViewDidLoad()
+                    self.presenter?.loadRepos(timeframe: .Day)
+                } else {
+                    self.noInternetImageVIew.isHidden = false
+                    self.repoTableView.isHidden = true
+                    self.seg.isHidden = true
+                }
+            }
+        })
+        
+    }
+    func setSegment() {
         seg.selectedSegmentTintColor = Palette.slateGrey
         seg.tintColor = Palette.slateGrey
         seg.ensureiOS12Style()
-        self.presenter?.presenterViewDidLoad()
-        self.presenter?.loadRepos(timeframe: .Day)
     }
     
     @IBAction func onSegmentChanged(_ sender: UISegmentedControl) {

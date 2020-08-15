@@ -11,6 +11,7 @@ PODS:
     - SDWebImage/Core (= 4.4.8)
   - SDWebImage/Core (4.4.8)
   - StanwoodCore (1.7)
+  - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
   - DataCache
@@ -19,6 +20,7 @@ DEPENDENCIES:
   - Moya
   - SDWebImage (~> 4.0)
   - StanwoodCore
+  - Toast-Swift
 
 SPEC REPOS:
   trunk:
@@ -29,6 +31,7 @@ SPEC REPOS:
     - Moya
     - SDWebImage
     - StanwoodCore
+    - Toast-Swift
 
 SPEC CHECKSUMS:
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
@@ -38,7 +41,8 @@ SPEC CHECKSUMS:
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
   StanwoodCore: b00bb3703d843d583fd884b603f0b88a77bc84b4
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: cdd1caf4dcb5ef75079ce6dd1eb36239263432ec
+PODFILE CHECKSUM: 200f8d7246aa850114599235e605663029f8b490
 
 COCOAPODS: 1.9.1

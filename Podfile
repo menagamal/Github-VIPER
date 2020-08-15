@@ -12,6 +12,7 @@ target 'GithubVIPER' do
   pod 'Moya'
   pod 'StanwoodCore'
   pod 'DataCache'
+  pod 'Toast-Swift'
 
   target 'GithubVIPERTests' do
     inherit! :search_paths

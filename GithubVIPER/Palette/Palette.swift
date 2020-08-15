@@ -14,5 +14,6 @@ enum Palette {
     static let slateGrey  = UIColor(red: 97.0 / 255.0, green: 97.0 / 255.0, blue: 106.0 / 255.0, alpha: 1.0)
     static let bg  = UIColor(white: 238.0 / 255.0, alpha: 1.0)
     static let bg_off_white =  UIColor(white: 247.0 / 255.0, alpha: 1.0)
-    
+    static let connectionColor = UIColor(red: 251.0 / 255.0, green: 93.0 / 255.0, blue: 110.0 / 255.0, alpha: 1.0)
+    static let noConnectionColor = UIColor(red: 97.0 / 255.0, green: 97.0 / 255.0, blue: 106.0 / 255.0, alpha: 1.0)
 }

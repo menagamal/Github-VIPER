@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RepoViewController" customModule="GithubVIPER" customModuleProvider="target">
             <connections>
-                <outlet property="controlFrameView" destination="ReS-kA-Bj1" id="nFg-z2-aiL"/>
+                <outlet property="noInternetImageVIew" destination="iZc-2q-zC0" id="Yba-l2-LQ2"/>
                 <outlet property="repoTableView" destination="RkC-hL-hJH" id="62H-4t-3Sf"/>
                 <outlet property="seg" destination="Vrr-K2-6tR" id="HMb-Ub-WGN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -19,13 +19,6 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ReS-kA-Bj1">
-                    <rect key="frame" x="32" y="32" width="311" height="30"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="ei5-9g-ZNP"/>
-                    </constraints>
-                </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RkC-hL-hJH">
                     <rect key="frame" x="16" y="78" width="343" height="557"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -44,21 +37,28 @@
                         <action selector="onSegmentChanged:" destination="-1" eventType="valueChanged" id="Cs8-GI-pNy"/>
                     </connections>
                 </segmentedControl>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nointernet" translatesAutoresizingMaskIntoConstraints="NO" id="iZc-2q-zC0">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.96350054757663028" green="0.95884595555935181" blue="0.96815513959390864" alpha="0.93680436643835618" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
-                <constraint firstItem="ReS-kA-Bj1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="32" id="GmV-Qv-d0O"/>
+                <constraint firstItem="iZc-2q-zC0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9eb-do-ITU"/>
                 <constraint firstAttribute="trailing" secondItem="RkC-hL-hJH" secondAttribute="trailing" constant="16" id="Heo-q0-e3j"/>
                 <constraint firstItem="Vrr-K2-6tR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="32" id="NOE-HK-Z7M"/>
                 <constraint firstAttribute="bottom" secondItem="RkC-hL-hJH" secondAttribute="bottom" constant="32" id="NRW-9L-3u6"/>
                 <constraint firstAttribute="trailing" secondItem="Vrr-K2-6tR" secondAttribute="trailing" constant="32" id="Q8R-Eh-2iR"/>
                 <constraint firstItem="RkC-hL-hJH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="RW1-Qc-7Hj"/>
-                <constraint firstItem="ReS-kA-Bj1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="32" id="alE-Ia-Q4d"/>
-                <constraint firstItem="RkC-hL-hJH" firstAttribute="top" secondItem="ReS-kA-Bj1" secondAttribute="bottom" constant="16" id="nQv-K5-1vX"/>
+                <constraint firstItem="iZc-2q-zC0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="hiw-B8-xJG"/>
+                <constraint firstItem="RkC-hL-hJH" firstAttribute="top" secondItem="Vrr-K2-6tR" secondAttribute="bottom" constant="15" id="lB5-KR-SXv"/>
+                <constraint firstAttribute="trailing" secondItem="iZc-2q-zC0" secondAttribute="trailing" id="mLV-gW-pxp"/>
                 <constraint firstItem="Vrr-K2-6tR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="32" id="o8w-5r-w9r"/>
-                <constraint firstAttribute="trailing" secondItem="ReS-kA-Bj1" secondAttribute="trailing" constant="32" id="psH-ke-sKt"/>
+                <constraint firstItem="iZc-2q-zC0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uV9-2O-XO3"/>
             </constraints>
             <point key="canvasLocation" x="138" y="154"/>
         </view>
     </objects>
+    <resources>
+        <image name="nointernet" width="800" height="600"/>
+    </resources>
 </document>

@@ -50,15 +50,10 @@ class RepoInteractor: BaseInteractor<AppTarget>,RepoInteractorInputProtocol {
             return
         }
         if CacheHandler.ids.contains(id) {
-            let x = CacheHandler.shared.deleteObject(object: repo)
-            print(x)
-            
+            let _ = CacheHandler.shared.deleteObject(object: repo)
             
         } else {
-            let x = CacheHandler.shared.SaveData(object: repo)
-            print(x)
-            
-            
+            let _ = CacheHandler.shared.SaveData(object: repo)
             
         }
     }

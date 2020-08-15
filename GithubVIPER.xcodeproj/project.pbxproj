@@ -67,6 +67,8 @@
 		D0E81C0424E86078002FC308 /* FavouriteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E81BFD24E86078002FC308 /* FavouriteInteractor.swift */; };
 		D0E81C0524E86078002FC308 /* FavouriteConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E81BFE24E86078002FC308 /* FavouriteConfig.swift */; };
 		D0E81C0624E86078002FC308 /* FavouriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E81BFF24E86078002FC308 /* FavouriteViewController.xib */; };
+		D0E81C0924E876A0002FC308 /* Notifications+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E81C0824E876A0002FC308 /* Notifications+Extention.swift */; };
+		D0E81C0C24E88319002FC308 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E81C0B24E88319002FC308 /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +148,8 @@
 		D0E81BFD24E86078002FC308 /* FavouriteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteInteractor.swift; sourceTree = "<group>"; };
 		D0E81BFE24E86078002FC308 /* FavouriteConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteConfig.swift; sourceTree = "<group>"; };
 		D0E81BFF24E86078002FC308 /* FavouriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteViewController.xib; sourceTree = "<group>"; };
+		D0E81C0824E876A0002FC308 /* Notifications+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notifications+Extention.swift"; sourceTree = "<group>"; };
+		D0E81C0B24E88319002FC308 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		E72ECF8F7A88F7AA5632D434 /* Pods-GithubVIPERTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubVIPERTests.release.xcconfig"; path = "Target Support Files/Pods-GithubVIPERTests/Pods-GithubVIPERTests.release.xcconfig"; sourceTree = "<group>"; };
 		EB2CD519175EC8CE6D92EAD4 /* Pods_GithubVIPERTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubVIPERTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -237,6 +241,7 @@
 		D044166624E6E5F3007B1B47 /* GithubVIPER */ = {
 			isa = PBXGroup;
 			children = (
+				D0E81C0A24E8830B002FC308 /* Reachabilty */,
 				D0E81BF124E84F2D002FC308 /* Cache */,
 				D04416CB24E72E6A007B1B47 /* Extentions */,
 				D04416B924E6EF1B007B1B47 /* Palette */,
@@ -406,6 +411,7 @@
 				D04416CC24E72E7B007B1B47 /* UIView+Extentions.swift */,
 				D04416CE24E72E7B007B1B47 /* UIViewController+Extentions.swift */,
 				D039DB4324E7C06A00211078 /* UISegmentedControl+Extentions.swift */,
+				D0E81C0824E876A0002FC308 /* Notifications+Extention.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -442,6 +448,14 @@
 				D0E81BFF24E86078002FC308 /* FavouriteViewController.xib */,
 			);
 			path = Favourite;
+			sourceTree = "<group>";
+		};
+		D0E81C0A24E8830B002FC308 /* Reachabilty */ = {
+			isa = PBXGroup;
+			children = (
+				D0E81C0B24E88319002FC308 /* Reachability.swift */,
+			);
+			path = Reachabilty;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -630,6 +644,7 @@
 				D04416B224E6EE97007B1B47 /* HomePresenter.swift in Sources */,
 				D04416D024E72E7B007B1B47 /* Date+Extensions.swift in Sources */,
 				D0E81C0324E86078002FC308 /* FavouriteProtocols.swift in Sources */,
+				D0E81C0924E876A0002FC308 /* Notifications+Extention.swift in Sources */,
 				D04416D124E72E7B007B1B47 /* UIViewController+Extentions.swift in Sources */,
 				D044166824E6E5F3007B1B47 /* AppDelegate.swift in Sources */,
 				D04416C724E700FF007B1B47 /* RepoProtocols.swift in Sources */,
@@ -653,6 +668,7 @@
 				D0E81C0124E86078002FC308 /* FavouriteRouter.swift in Sources */,
 				D0E81C0524E86078002FC308 /* FavouriteConfig.swift in Sources */,
 				D04416D524E73D03007B1B47 /* RepoTableViewCell.swift in Sources */,
+				D0E81C0C24E88319002FC308 /* Reachability.swift in Sources */,
 				D044169E24E6EC64007B1B47 /* BaseView.swift in Sources */,
 				D039DB4A24E7C7B000211078 /* FetchReposResponse.swift in Sources */,
 				D04416AA24E6EDDD007B1B47 /* AppTarget.swift in Sources */,

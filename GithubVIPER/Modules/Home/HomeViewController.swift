@@ -21,6 +21,7 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         super.viewDidLoad()
         tabBar.delegate = self
         setLayout()
+        listToNetworkChange()
         HomeConfig().createModule(view: self)
         self.presenter?.loadRepo()
         tabBar.selectedItem = tabBar.items?.first

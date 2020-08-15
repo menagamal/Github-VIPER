@@ -56,6 +56,7 @@ extension FavouritePresenter:RepoCellDataSourceDelegate {
         } else {
             let _ = CacheHandler.shared.SaveData(object: repo)
         }
+        interactor?.loadUserFavItems()
     }
     
     
