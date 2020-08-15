@@ -65,6 +65,10 @@ class RepoPresenter: BasePresenter,RepoPresenterProtocol {
 }
 
 extension RepoPresenter:RepoCellDataSourceDelegate{
+    func toggleToFavourite(repo: Repos) {
+        interactor?.toggleToFavourite(repo: repo)
+    }
+    
     func didSelected(repo:Repos) {
         self.router.showDetails(with: repo)
     }

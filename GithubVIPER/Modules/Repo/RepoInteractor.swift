@@ -45,5 +45,23 @@ class RepoInteractor: BaseInteractor<AppTarget>,RepoInteractorInputProtocol {
             
         }
     }
+    func toggleToFavourite(repo: Repos) {
+        guard let id = repo.id else {
+            return
+        }
+        if CacheHandler.ids.contains(id) {
+            let x = CacheHandler.shared.deleteObject(object: repo)
+            print(x)
+            
+            
+        } else {
+            let x = CacheHandler.shared.SaveData(object: repo)
+            print(x)
+            
+            
+            
+        }
+    }
+    
     
 }

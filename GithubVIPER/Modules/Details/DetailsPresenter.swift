@@ -35,7 +35,7 @@ extension DetailsPresenter: DetailsInteractorOutputProtocol {
         guard let view = view else {
             return
         }
-        view.labelTitle.text = repo.description ?? ""
+        view.labelTitle.text = repo.descriptionStr ?? ""
         view.labelLanguage.text = repo.language ?? ""
         view.labelRate.text = "\(repo.score ?? 0 ) Stars"
         view.labelFork.text = "\(repo.forks_count ?? 0 ) Stars"

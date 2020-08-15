@@ -23,7 +23,12 @@ class HomeRouter: HomeRouterProtocol {
     }
     
     func loadFav() {
-        
+        if let main = view as? HomeViewController {
+            let vc : FavouriteViewController = UIViewController.instanceXib()
+            FavouriteConfig().createModule(view: vc)
+            
+            main.replaceChild(viewController: vc)
+        }
     }
     
 }

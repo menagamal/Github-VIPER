@@ -31,6 +31,7 @@ protocol RepoInteractorOutputProtocol: class {
 protocol RepoInteractorInputProtocol: class {
     var presenter: RepoInteractorOutputProtocol?  { get set }
     func loadRepos (date:String,page:Int,timeframe:TimeFrame)
+    func toggleToFavourite(repo: Repos)
 }
 
 //MARK: Router -

@@ -44,7 +44,9 @@ class RepoCellDataSource:  NSObject, UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RepoTableViewCell", for: indexPath) as! RepoTableViewCell
         cell.selectionStyle = .none
-        cell.setDetails(repo: repos[indexPath.row])
+        cell.setDetails(repo: repos[indexPath.row], action: {
+            self.delegate.toggleToFavourite(repo: self.repos[indexPath.row])
+        })
         return cell
     }
     
@@ -55,5 +57,6 @@ class RepoCellDataSource:  NSObject, UITableViewDataSource,UITableViewDelegate {
 
 protocol RepoCellDataSourceDelegate: class {
     func didSelected(repo:Repos)
+    func toggleToFavourite(repo:Repos)
 }
 

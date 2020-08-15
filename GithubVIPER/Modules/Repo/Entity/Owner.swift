@@ -12,10 +12,13 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 */
 
 import Foundation
-struct Owner : Codable {
-	let id : Int?
+class Owner : NSObject,NSCoding, Codable  {
+	
+    let id : Int?
 	let avatar_url : String?
 	let url : String?
+    var base64:String = ""
+    
 	enum CodingKeys: String, CodingKey {
 
 		case id = "id"
@@ -23,12 +26,37 @@ struct Owner : Codable {
 		case url = "url"
         
 	}
+    override init() {
+        id = -1
+        avatar_url = ""
+        url = ""
+        super.init()
+        
+    }
 
-	init(from decoder: Decoder) throws {
+	required init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
 		id = try values.decodeIfPresent(Int.self, forKey: .id)
 		avatar_url = try values.decodeIfPresent(String.self, forKey: .avatar_url)
 		url = try values.decodeIfPresent(String.self, forKey: .url)
 	}
-
+    
+    //MARK: CACHE Initializers
+    func encode(with coder: NSCoder) {
+        coder.encode(self.id, forKey: "id")
+        coder.encode(self.avatar_url, forKey: "avatar_url")
+        coder.encode(self.url, forKey: "url")
+        coder.encode(self.base64, forKey: "base64")
+     
+    }
+    
+    required init?(coder: NSCoder) {
+        
+        self.id = coder.decodeObject(forKey: "id") as? Int
+        self.avatar_url = coder.decodeObject(forKey: "avatar_url") as? String
+        self.url = coder.decodeObject(forKey: "url") as? String
+        self.base64 = coder.decodeObject(forKey: "base64") as? String ?? ""
+        super.init()
+       
+    }
 }

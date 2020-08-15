@@ -19,9 +19,11 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tabBar.delegate = self
         setLayout()
         HomeConfig().createModule(view: self)
         self.presenter?.loadRepo()
+        tabBar.selectedItem = tabBar.items?.first
     }
     
     func setLayout() {
@@ -52,4 +54,17 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         
     }
     
+}
+
+extension HomeViewController:UITabBarDelegate{
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        if(item.tag == 1) {
+           //repo
+            self.presenter?.loadRepo()
+        }
+        else if(item.tag == 2) {
+           // fav
+            self.presenter?.loadFav()
+        }
+    }
 }

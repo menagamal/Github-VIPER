@@ -11,6 +11,7 @@ target 'GithubVIPER' do
   pod 'FittedSheets'
   pod 'Moya'
   pod 'StanwoodCore'
+  pod 'DataCache'
 
   target 'GithubVIPERTests' do
     inherit! :search_paths
