@@ -47,6 +47,9 @@ class RepoCellDataSource:  NSObject, UITableViewDataSource,UITableViewDelegate {
         cell.setDetails(repo: repos[indexPath.row], action: {
             self.delegate.toggleToFavourite(repo: self.repos[indexPath.row])
         })
+        if indexPath.row == repos.count - 1 {
+            delegate.loadNextPage()
+        }
         return cell
     }
     
@@ -58,5 +61,6 @@ class RepoCellDataSource:  NSObject, UITableViewDataSource,UITableViewDelegate {
 protocol RepoCellDataSourceDelegate: class {
     func didSelected(repo:Repos)
     func toggleToFavourite(repo:Repos)
+    func loadNextPage()
 }
 

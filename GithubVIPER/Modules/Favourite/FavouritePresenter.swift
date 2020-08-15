@@ -11,9 +11,9 @@
 import UIKit
 
 class FavouritePresenter: BasePresenter,FavouritePresenterProtocol {
-
+    
     weak internal var view: FavouriteViewProtocol?
-   
+    
     var interactor: FavouriteInteractorInputProtocol?
     
     private let router: FavouriteRouterProtocol
@@ -57,6 +57,9 @@ extension FavouritePresenter:RepoCellDataSourceDelegate {
             let _ = CacheHandler.shared.SaveData(object: repo)
         }
         interactor?.loadUserFavItems()
+    }
+    func loadNextPage() {
+        
     }
     
     
