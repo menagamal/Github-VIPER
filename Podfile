@@ -11,7 +11,7 @@ target 'GithubVIPER' do
   pod 'FittedSheets'
   pod 'Moya'
   pod 'StanwoodCore'
-pod 'BetterSegmentedControl'
+
   target 'GithubVIPERTests' do
     inherit! :search_paths
     # Pods for testing
