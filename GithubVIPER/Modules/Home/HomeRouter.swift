@@ -31,4 +31,10 @@ class HomeRouter: HomeRouterProtocol {
         }
     }
     
+    func navigateToSearch() {
+        let vc : SearchViewController = UIViewController.instanceXib()
+        SearchConfig().createModule(view: vc )
+        view.show(vc, sender: view)
+    }
+    
 }

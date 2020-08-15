@@ -23,6 +23,7 @@ protocol HomePresenterProtocol: class {
     var childViewController: UIViewController! { get set }
     func loadRepo()
     func loadFav()
+    func navigateToSearch()
 }
 
 //MARK: Interactor -
@@ -40,4 +41,5 @@ protocol HomeRouterProtocol: class {
     var view: UIViewController! { get set }
     func loadRepo()
     func loadFav()
+    func navigateToSearch()
 }

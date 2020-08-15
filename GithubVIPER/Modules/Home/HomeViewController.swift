@@ -54,6 +54,9 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         self.presenter?.childViewController = viewController
         
     }
+    @IBAction func search(_ sender: Any) {
+        self.presenter?.navigateToSearch()
+    }
     
 }
 

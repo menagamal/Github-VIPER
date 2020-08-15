@@ -32,7 +32,9 @@ class HomePresenter: BasePresenter,HomePresenterProtocol {
     func loadFav() {
         self.router.loadFav()
     }
-    
+    func navigateToSearch() {
+        self.router.navigateToSearch()
+    }
     
 }
 

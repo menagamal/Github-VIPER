@@ -54,7 +54,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="i2o-ZK-ZZh"/>
+                    <navigationItem key="navigationItem" id="i2o-ZK-ZZh">
+                        <barButtonItem key="rightBarButtonItem" image="search" id="hoN-uR-Gfb">
+                            <color key="tintColor" red="0.22745098039215686" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="search:" destination="BYZ-38-t0r" id="rpO-eu-maX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="container" destination="t79-Cc-B9d" id="Z5S-2E-V7Y"/>
                         <outlet property="tabBar" destination="r3f-q4-YdE" id="hc2-I9-J19"/>
@@ -100,6 +107,7 @@
     </scenes>
     <resources>
         <image name="database" width="35" height="35"/>
+        <image name="search" width="20" height="20"/>
         <image name="tabFav" width="35" height="35"/>
     </resources>
 </document>
