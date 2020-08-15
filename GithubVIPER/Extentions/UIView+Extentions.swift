@@ -10,7 +10,14 @@ import UIKit
 import AudioToolbox
 @IBDesignable
 extension UIView {
-    
+    @IBInspectable public var cornerRadius: CGFloat {
+           get {
+               return layer.cornerRadius
+           }
+           set {
+               layer.cornerRadius = newValue
+           }
+       }
     @IBInspectable var bottomCornerRadius: CGFloat {
         get {
             return layer.cornerRadius

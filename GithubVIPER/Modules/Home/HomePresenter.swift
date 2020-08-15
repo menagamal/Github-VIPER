@@ -26,11 +26,11 @@ class HomePresenter: BasePresenter,HomePresenterProtocol {
         self.router = router
     }
     func loadRepo() {
-    
+        self.router.loadRepo()
     }
     
     func loadFav() {
-        
+        self.router.loadFav()
     }
     
     

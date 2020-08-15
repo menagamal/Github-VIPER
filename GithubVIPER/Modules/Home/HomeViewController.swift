@@ -15,14 +15,13 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var tabBar: UITabBar!
     
-    weak var presenter: HomePresenterProtocol?
+    var presenter: HomePresenterProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setLayout()
-        let x : RepoViewController = UIViewController.instanceXib()
-        RepoConfig().createModule(view: x)
-        self.replaceChild(viewController: x)
+        HomeConfig().createModule(view: self)
+        self.presenter?.loadRepo()
     }
     
     func setLayout() {

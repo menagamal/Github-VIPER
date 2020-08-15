@@ -36,5 +36,5 @@ protocol RepoInteractorInputProtocol: class {
 //MARK: Router -
 protocol RepoRouterProtocol: class {
     var view: UIViewController! { get set }
-    
+    func showDetails(with repo:Repos)
 }

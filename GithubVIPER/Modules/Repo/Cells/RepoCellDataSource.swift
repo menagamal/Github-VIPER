@@ -49,11 +49,11 @@ class RepoCellDataSource:  NSObject, UITableViewDataSource,UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate.didSelected()
+        delegate.didSelected(repo: self.repos[indexPath.row])
     }
 }
 
 protocol RepoCellDataSourceDelegate: class {
-    func didSelected()
+    func didSelected(repo:Repos)
 }
 

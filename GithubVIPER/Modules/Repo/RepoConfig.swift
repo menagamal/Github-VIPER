@@ -21,6 +21,7 @@ class RepoConfig: BaseConfig{
         router.view = view
         interactor.basePresenter = handleBasePresenter(baseView: view)
         view.presenter = presenter
+        
         interactor.presenter = presenter
         presenter.baseView = view
     }

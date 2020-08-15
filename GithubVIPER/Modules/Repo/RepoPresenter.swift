@@ -65,8 +65,8 @@ class RepoPresenter: BasePresenter,RepoPresenterProtocol {
 }
 
 extension RepoPresenter:RepoCellDataSourceDelegate{
-    func didSelected() {
-        
+    func didSelected(repo:Repos) {
+        self.router.showDetails(with: repo)
     }
     
 }

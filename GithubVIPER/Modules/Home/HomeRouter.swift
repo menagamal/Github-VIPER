@@ -11,8 +11,19 @@
 import UIKit
 
 class HomeRouter: HomeRouterProtocol {
+    var view: UIViewController!
     
-     var view: UIViewController!
+    func loadRepo() {
+        if let main = view as? HomeViewController {
+            let vc : RepoViewController = UIViewController.instanceXib()
+            RepoConfig().createModule(view: vc)
+            
+            main.replaceChild(viewController: vc)
+        }
+    }
     
-  
+    func loadFav() {
+        
+    }
+    
 }

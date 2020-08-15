@@ -13,6 +13,10 @@ import UIKit
 class RepoRouter: RepoRouterProtocol {
     
      var view: UIViewController!
-    
+    func showDetails(with repo: Repos) {
+        let vc:DetailsViewController = UIViewController.instanceXib()
+        DetailsConfig().createModule(view: vc, repo: repo)
+        view.show(vc, sender: view)
+    }
   
 }

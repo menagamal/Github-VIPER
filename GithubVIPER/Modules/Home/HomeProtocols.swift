@@ -38,5 +38,6 @@ protocol HomeInteractorInputProtocol: class {
 //MARK: Router -
 protocol HomeRouterProtocol: class {
     var view: UIViewController! { get set }
-    
+    func loadRepo()
+    func loadFav()
 }
