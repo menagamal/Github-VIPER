@@ -15,7 +15,7 @@ class RepoViewController: BaseViewController, RepoViewProtocol {
     
     @IBOutlet weak var noInternetImageVIew: UIImageView!
     @IBOutlet weak var seg: UISegmentedControl!
-    @IBOutlet weak var repoTableView: UITableView!
+    @IBOutlet weak var repoCollectionView: UICollectionView!
     
     var presenter: RepoPresenterProtocol?
     
@@ -25,7 +25,7 @@ class RepoViewController: BaseViewController, RepoViewProtocol {
         Reachability().checkForInternet(action: { (value) in
             DispatchQueue.main.async {
                 if value {
-                    self.repoTableView.isHidden = false
+                    self.repoCollectionView.isHidden = false
                     self.seg.isHidden = false
                     self.noInternetImageVIew.isHidden = true
                     self.setSegment()
@@ -33,7 +33,7 @@ class RepoViewController: BaseViewController, RepoViewProtocol {
                     self.presenter?.loadRepos(timeframe: .Day)
                 } else {
                     self.noInternetImageVIew.isHidden = false
-                    self.repoTableView.isHidden = true
+                    self.repoCollectionView.isHidden = true
                     self.seg.isHidden = true
                 }
             }

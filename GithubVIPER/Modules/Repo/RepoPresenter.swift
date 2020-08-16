@@ -18,7 +18,7 @@ class RepoPresenter: BasePresenter,RepoPresenterProtocol {
     
     private let router: RepoRouterProtocol
     
-    private var dataSource:RepoCellDataSource?
+    private var dataSource:RepoCollectionDataSource?
     
     private var dailyPageCount:Int?
     private var weeklyPageCount:Int?
@@ -40,7 +40,7 @@ class RepoPresenter: BasePresenter,RepoPresenterProtocol {
         guard let view =  self.view else {
             return
         }
-        dataSource = RepoCellDataSource(delegate: self, tableView: view.repoTableView)
+        dataSource = RepoCollectionDataSource(collection: view.repoCollectionView, delegate: self)
     }
     func loadRepos(timeframe:TimeFrame) {
         var date = ""
@@ -75,7 +75,7 @@ class RepoPresenter: BasePresenter,RepoPresenterProtocol {
     
 }
 
-extension RepoPresenter:RepoCellDataSourceDelegate{
+extension RepoPresenter:RepoCollectionDataSourceDelegate{
     func toggleToFavourite(repo: Repos) {
         interactor?.toggleToFavourite(repo: repo)
     }
@@ -131,7 +131,7 @@ extension RepoPresenter: RepoInteractorOutputProtocol {
         self.presenterViewDidLoad()
         dataSource?.reloadWithData(repos: response)
         DispatchQueue.main.async {
-            self.view?.repoTableView.setContentOffset(.zero, animated: true)
+            self.view?.repoCollectionView.setContentOffset(CGPoint(x:0,y:0), animated: true)
         }
     }
     

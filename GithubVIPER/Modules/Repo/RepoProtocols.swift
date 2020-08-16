@@ -14,7 +14,7 @@ import UIKit
 //MARK: View -
 protocol RepoViewProtocol: class {
     var presenter: RepoPresenterProtocol?  { get set }
-    var repoTableView: UITableView!  { get set }
+    var repoCollectionView: UICollectionView!  { get set }
 }
 //MARK: Presenter -
 protocol RepoPresenterProtocol: class {
