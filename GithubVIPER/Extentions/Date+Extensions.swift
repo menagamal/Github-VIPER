@@ -74,6 +74,6 @@ extension String {
     func dateFromString(format:String) -> Date{
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format
-        return dateFormatter.date(from: self)!
+        return dateFormatter.date(from: self) ?? Date()
     }
 }

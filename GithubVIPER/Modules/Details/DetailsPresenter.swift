@@ -11,7 +11,7 @@
 import UIKit
 
 class DetailsPresenter: BasePresenter,DetailsPresenterProtocol {
-
+    
     weak internal var view: DetailsViewProtocol?
     var interactor: DetailsInteractorInputProtocol?
     
@@ -39,8 +39,28 @@ extension DetailsPresenter: DetailsInteractorOutputProtocol {
         view.labelLanguage.text = repo.language ?? ""
         view.labelRate.text = "\(repo.score ?? 0 ) Stars"
         view.labelFork.text = "\(repo.forks_count ?? 0 ) Stars"
-        view.labelCreateAt.text = repo.created_at ?? ""
+        if let dateStr = repo.created_at {
+            let newString = dateStr.replacingOccurrences(of: "T", with: " ", options: .literal, range: nil)
+            let finalString = newString.replacingOccurrences(of: "Z", with: " ", options: .literal, range: nil)
+            
+            let date = finalString.dateFromString(format: DateFormat.mm_dd_yyyy_hh_mm.get())
+            let string = date.dateToString(format: DateFormat.dd_MM_yyyy.get())
+            let diffInYears = yearsBetweenDate(startDate: date, endDate: Date())
+            view.labelCreateAt.text = "Created \(diffInYears) years ago at \(string)"
+        } else {
+            view.labelCreateAt.text = repo.created_at ?? ""
+        }
+        
         view.loadTitle(str: repo.name ?? "" )
+    }
+    
+    func yearsBetweenDate(startDate: Date, endDate: Date) -> Int {
+
+        let calendar = Calendar.current
+
+        let components = calendar.dateComponents([.year], from: startDate, to: endDate)
+
+        return components.year ?? 0
     }
     
     
