@@ -22,7 +22,7 @@
                                     <constraint firstAttribute="height" constant="60" id="M6N-CX-oDo"/>
                                 </constraints>
                                 <items>
-                                    <tabBarItem tag="1" title="Repositories" image="database" id="gvY-Q4-oej"/>
+                                    <tabBarItem tag="1" title="Repositories" image="database" selectedImage="repo" id="gvY-Q4-oej"/>
                                     <tabBarItem tag="2" title="Favourites" image="tabFav" id="Mef-nQ-uRW"/>
                                 </items>
                             </tabBar>
@@ -107,6 +107,7 @@
     </scenes>
     <resources>
         <image name="database" width="35" height="35"/>
+        <image name="repo" width="25" height="27"/>
         <image name="search" width="20" height="20"/>
         <image name="tabFav" width="35" height="35"/>
     </resources>

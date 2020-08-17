@@ -25,6 +25,22 @@ class HomeViewController: BaseViewController, HomeViewProtocol {
         HomeConfig().createModule(view: self)
         self.presenter?.loadRepo()
         tabBar.selectedItem = tabBar.items?.first
+        setTabBarItemsProperties()
+    }
+    
+    private func setTabBarItemsProperties() {
+        guard let first = (tabBar.items?[0]) else {
+            return
+        }
+        guard let second = (tabBar.items?[1]) else {
+            return
+        }
+        first.selectedImage = UIImage(named: "repo")?.withRenderingMode(.alwaysOriginal)
+        first.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Palette.slateGrey], for: .selected)
+
+        second.selectedImage = UIImage(named: "fav-1")?.withRenderingMode(.alwaysOriginal)
+        second.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Palette.slateGrey], for: .selected)
+
     }
     
     func setLayout() {
@@ -71,4 +87,15 @@ extension HomeViewController:UITabBarDelegate{
             self.presenter?.loadFav()
         }
     }
+    
+    
+    func loadRepoImage() {
+        
+        
+
+    }
+    func loadFavImage() {
+        
+    }
+    
 }
